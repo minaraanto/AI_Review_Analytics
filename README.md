@@ -84,11 +84,11 @@ Live-connected Power BI report showing:
 
 | Stage | Status |
 |---|---|
-| Bronze ingestion | ✅ Complete |
-| Silver cleaning | 🔲 In progress |
-| Gold sentiment scoring | 🔲 In progress |
-| Power BI dashboard | 🔲 In progress |
-| Pipeline orchestration | 🔲 In progress |
+| Bronze ingestion | Complete |
+| Silver cleaning | In progress |
+| Gold sentiment scoring | In progress |
+| Power BI dashboard | In progress |
+| Pipeline orchestration | In progress |
 
 ## Author
 
