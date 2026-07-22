@@ -70,6 +70,7 @@ Live-connected Power BI report showing:
 - **Lakehouse over Warehouse** — needed to land raw unstructured text 
   files before transformation; a Warehouse alone only accepts structured 
   SQL inserts
+- **Deduplication Strategy**: Full-row deduplication was applied across all columns, which reduced the dataset by approximately 15% (64,066 rows). Fine-grained deduplication on review text alone was not appropriate because different customers can independently write the same review for the same product — removing those would lose legitimate signal. A column-subset approach was also ruled out since the dataset lacked customer ID or timestamp columns needed to reliably identify true duplicate submissions. Full-row deduplication was therefore the safest and most defensible approach given the data available.
 - **Azure AI Language over custom model** — using a managed cognitive 
   service is the correct production engineering decision; avoids 
   maintaining a custom model when a pretrained one exceeds requirements
